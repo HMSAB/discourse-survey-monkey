@@ -1,0 +1,4 @@
+en:
+  site_settings:
+    survey_monkey_enabled: "Enable to enable survey monkey plugin."
+    survey_monkey_survey_url: "Set to your specific survey monkey survey."
