@@ -2,3 +2,27 @@ en:
   site_settings:
     survey_monkey_enabled: "Enable to enable survey monkey plugin."
     survey_monkey_survey_url: "Set to your specific survey monkey survey."
+    survey_monkey_manual_button: "Enable to add a button to topics to manually force send a survey"
+  survey_monkey:
+    title: "%{site_url} Survey Request"
+    subject_template: ""
+    text_body_template: |
+      Hello,<br><br>
+      Thank you for contacting HMS Industrial Networks Technical Support. <br> <br>
+      To provide you with an even better customer support experience we are collecting feedback on how we performed. <br> <br>
+      We actively use feedback to improve our customer support and to provide you with the best customer service. <br>
+      The below link points to a feedback survey that typically takes one or two minutes to complete.<br><br>
+      Please note, by completing this survey you will not be added to any additional mailing lists.<br>
+      We take your privacy extremely seriously, and we never sell lists or email addresses.<br> <br>
+      %{survey}
+      <br><br>
+      <strong>More questions? Check out the HMS Technical Forum.<strong><br><br>
+      <a href='https://forum.hms-networks.com'><img style='max-height: 55px' src='http://res.cloudinary.com/dosr7bvsr/image/upload/v1494032851/logo_ucczxd.png'></img></a><br>
+      <a href='https://forum.hms-networks.com'> https://forum.hms-networks.com</a><br><br>
+      Thank you for taking the time to provide feedback.<br> <br>
+      Best Regards, <br>
+      <p style=&quot;font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#003366&quot;;><strong>HMS Technical Support Team</strong><br><br>
+      HMS Technical Services<br>
+      <a href='mailto:us_support@hms.se'>us-support@hms.se</a><br>
+      1 (312) 829 0601<br>
+      <a style='height: 80px;' href='www.hms-networks.com'><img src='https://res.cloudinary.com/dzyynwz7l/image/upload/v1491576487/sign_qgmbsi.jpg'></img></a><br>
