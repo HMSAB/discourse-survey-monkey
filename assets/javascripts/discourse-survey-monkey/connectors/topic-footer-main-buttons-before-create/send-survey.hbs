@@ -1,0 +1,13 @@
+{{#if topic.custom_fields.survey_sent}}
+{{d-button icon="check"
+           label="survey_monkey.has_sent.title"
+           title="survey_monkey.has_sent.help"
+           disabled=true}}
+{{else}}
+{{d-button id="survey_button"
+          icon="paper-plane"
+           action="sendSurvey"
+           label="survey_monkey.not_sent.title"
+           title="survey_monkey.not_sent.help"
+          }}
+{{/if}}

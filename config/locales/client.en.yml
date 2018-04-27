@@ -1,0 +1,9 @@
+en:
+  js:
+    survey_monkey:
+      not_sent:
+        title: "Send a Survey"
+        help: "Click to send a survey to the original poster"
+      has_sent:
+        title: "Survey Sent"
+        help: "A survey has already been sent to the original poster."
