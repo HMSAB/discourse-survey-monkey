@@ -11,8 +11,7 @@ export default Ember.Controller.extend({
         type: 'POST',
         data: { topic_id: this.get('model.topic_id')}
       }).then(() => {
-        var currentUrl = window.location.href;
-        DiscourseURL.routeTo(currentUrl);
+        window.location.reload(true);
       }).catch(popupAjaxError);
     }
   }
