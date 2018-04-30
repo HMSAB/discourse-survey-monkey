@@ -1,8 +1,8 @@
 # name: survey-monkey
-# about: Searchable private category topics
+# about: Send an email containing a survey upon topic solved
 # version: 0.1
 # authors: Jordan Seanor
-# url: https://github.com/HMSAB/discourse-hms-phone-tracking.git
+# url: https://github.com/HMSAB/discourse-survey-monkey.git
 
 require_relative 'survey_mail'
 enabled_site_setting :survey_monkey_enabled
