@@ -20,12 +20,20 @@ after_initialize do
   DiscourseEvent.on(:accepted_solution) do |topic, post, user|
     solved_topic = Topic.find_by(id: topic.topic_id)
     if solved_topic.custom_fields["survey_sent"] == false || solved_topic.custom_fields["survey_sent"].nil?
-      original_poster = User.find_by(id: solved_topic.user_id)
-      survey = SiteSetting.survey_monkey_survey_url.to_s
-      url = survey.sub('%{topic_id}', solved_topic.id.to_s)
-      SurveyMail::Survey.new.execute(template: 'survey_monkey', to_address: original_poster.email, survey: url)
-      solved_topic.custom_fields["survey_sent"] = true;
-      solved_topic.save!
+      if !solved_topic.custom_fields["phone_survey_recipient"].nil?
+        recip = User.find_by(username: solved_topic.custom_fields["phone_survey_recipient"].to_s)
+        url = survey.sub('%{topic_id}', solved_topic.id.to_s)
+        SurveyMail::Survey.new.execute(template: 'survey_monkey', to_address: recip.email, survey: url)
+        solved_topic.custom_fields["survey_sent"] = true;
+        solved_topic.save!
+      else
+        original_poster = User.find_by(id: solved_topic.user_id)
+        survey = SiteSetting.survey_monkey_survey_url.to_s
+        url = survey.sub('%{topic_id}', solved_topic.id.to_s)
+        SurveyMail::Survey.new.execute(template: 'survey_monkey', to_address: original_poster.email, survey: url)
+        solved_topic.custom_fields["survey_sent"] = true;
+        solved_topic.save!
+      end
     end
   end
 end
