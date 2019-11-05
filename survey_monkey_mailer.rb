@@ -1,5 +1,5 @@
 require_dependency 'email/message_builder'
-require_dependency 'email/build_email_helper'
+require 'email/build_email_helper'
 
 class SurveyMonkeyMailer < ActionMailer::Base
   include Email::BuildEmailHelper
