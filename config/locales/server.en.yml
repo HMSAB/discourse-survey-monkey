@@ -1,9 +1,9 @@
 en:
   site_settings:
-    survey_monkey_enabled: "Enable to enable survey monkey plugin."
-    survey_monkey_survey_url: "Set to your specific survey monkey survey."
-    survey_monkey_manual_button: "Enable to add a button to topics to manually force send a survey"
-  survey_monkey:
+    survey_enabled: "Enable to enable survey plugin."
+    survey_survey_url: "Set to your specific survey survey."
+    survey_manual_button: "Enable to add a button to topics to manually force send a survey"
+  survey:
     title: "%{site_url} Survey Request"
     subject_template: ""
     text_body_template: |

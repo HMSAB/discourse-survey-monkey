@@ -1,7 +1,7 @@
 plugins:
-  survey_monkey_enabled:
+  survey_enabled:
     default: true
     client: true
-  survey_monkey_survey_url:
+  survey_survey_url:
     default: ""
     client: true

@@ -1,6 +1,6 @@
 require_dependency 'email/sender'
 require_dependency 'sidekiq'
-require_relative 'survey_monkey_mailer'
+require_relative 'survey_mailer'
 
 module SurveyMail
   class Survey
@@ -16,8 +16,8 @@ module SurveyMail
       raise Discourse::InvalidParameters.new(:to_address) if to_address.blank?
       raise Discourse::InvalidParameters.new(:survey) if survey.blank?
 
-      message = SurveyMonkeyMailer.send_email(template, to_address, survey)
-      Email::Sender.new(message, :survey_monkey).send
+      message = SurveyMailer.send_email(template, to_address, survey)
+      Email::Sender.new(message, :survey).send
     end
   end
 end

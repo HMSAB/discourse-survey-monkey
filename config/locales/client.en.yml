@@ -1,6 +1,6 @@
 en:
   js:
-    survey_monkey:
+    survey:
       not_sent:
         title: "Send a Survey"
         help: "Click to send a survey to the original poster"
