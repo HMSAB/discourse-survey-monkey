@@ -20,12 +20,7 @@ after_initialize do
   DiscourseEvent.on(:accepted_solution) do |topic, post, user|
     solved_topic = Topic.find_by(id: topic.topic_id)
     if solved_topic.custom_fields["survey_sent"] == false || solved_topic.custom_fields["survey_sent"].nil?
-      @user = nil
-      if !solved_topic.custom_fields["phone_survey_recipient"].nil?
-        @user = User.find_by(username: solved_topic.custom_fields["phone_survey_recipient"].to_s)
-      else
-        @user = User.find_by(id: solved_topic.user_id)
-      end
+      @user = User.find_by(id: solved_topic.user_id)
       url = SiteSetting.survey_survey_url.to_s
       SurveyMail::Survey.new.execute(template: 'survey', to_address: @user.email, survey: url)
       solved_topic.custom_fields["survey_sent"] = true;
