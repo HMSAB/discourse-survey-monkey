@@ -1,7 +1,7 @@
 require 'email'
 require 'email/build_email_helper'
 
-class SurveyMonkeyMailer < ActionMailer::Base
+class SurveyMailer < ActionMailer::Base
 
   def send_email(template, to_address, survey)
     build_email(

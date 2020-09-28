@@ -13,7 +13,7 @@ export default {
       var model = {
         topic_id: this.topic.id
       }
-      let controller = container.lookup('controller:survey-monkey');
+      let controller = container.lookup('controller:survey');
       controller.set('model', model);
       controller.send('sendSurvey')
     }

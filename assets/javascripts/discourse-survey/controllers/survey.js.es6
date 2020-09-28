@@ -5,7 +5,7 @@ import { popupAjaxError } from 'discourse/lib/ajax-error';
 export default Ember.Controller.extend({
   actions: {
     sendSurvey(){
-      let path = '/surveymonkey/send_survey';
+      let path = '/survey/send_survey';
 
       return ajax(path, {
         type: 'POST',
