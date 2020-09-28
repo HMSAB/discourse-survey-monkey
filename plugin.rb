@@ -1,4 +1,4 @@
-# name: survey-monkey
+# name: survey
 # about: Send an email containing a survey upon topic solved
 # version: 0.1
 # authors: HMS Solution Center Americas
