@@ -1,7 +1,7 @@
 # name: survey-monkey
 # about: Send an email containing a survey upon topic solved
 # version: 0.1
-# authors: Jordan Seanor
+# authors: HMS Solution Center Americas
 # url: https://github.com/HMSAB/discourse-survey-monkey.git
 
 require_relative 'survey_mail'
