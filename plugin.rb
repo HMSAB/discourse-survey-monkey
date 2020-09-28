@@ -26,8 +26,7 @@ after_initialize do
       else
         @user = User.find_by(id: solved_topic.user_id)
       end
-      survey = SiteSetting.survey_survey_url.to_s
-      url = survey.sub('%{topic_id}', solved_topic.id.to_s)
+      url = SiteSetting.survey_survey_url.to_s
       SurveyMail::Survey.new.execute(template: 'survey', to_address: @user.email, survey: url)
       solved_topic.custom_fields["survey_sent"] = true;
       solved_topic.save!
