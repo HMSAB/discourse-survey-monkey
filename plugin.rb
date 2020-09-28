@@ -11,7 +11,7 @@ after_initialize do
   load File.expand_path("../controllers/survey_controller.rb", __FILE__)
 
   Discourse::Application.routes.prepend do
-   post 'survey/send_survey' => 'survey#send_survey'
+    post 'survey/send_survey' => 'survey#send_survey'
   end
 
   Topic.register_custom_field_type('survey_sent', :boolean)
