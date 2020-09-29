@@ -1,7 +1,7 @@
 en:
   site_settings:
-    survey_enabled: "Enable to enable survey plugin."
-    survey_survey_url: "Set to your specific survey survey."
+    survey_enabled: "Enable the survey plugin"
+    survey_survey_url: "Set to the survey URL"
     survey_manual_button: "Enable to add a button to topics to manually force send a survey"
   survey:
     title: "%{site_url} Survey Request"
