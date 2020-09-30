@@ -5,5 +5,13 @@ en:
     survey_manual_button: "Enable to add a button to topics to manually force send a survey"
   survey:
     title: "%{site_url} Survey Request"
-    subject_template: ""
+    subject_template: "Tell us how we did and we will make a donation on your behalf"
     text_body_template: |
+      At HMS we are always looking for ways to improve so we can provide an outstanding customer experience. <br><br>
+      We have developed this quick survey about your experience and we'd love a chance to hear from you. Also, we will donate $3 dollars per survey to your selected charity.<br><br>
+      %{survey}
+      <br><br>
+      Thank you for your feedback.<br><br>
+      Best Regards,<br>
+      HMS Technical Services<br><br>
+      *We take your privacy extremely seriously, and we never sell lists or email addresses.*<br>
