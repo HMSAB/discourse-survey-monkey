@@ -1,6 +1,6 @@
 # name: survey
 # about: Send an email containing a survey upon topic solved
-# version: 0.2
+# version: 0.3
 # authors: HMS Solution Center Americas
 # url: https://github.com/hms-networks/discourse-survey
 
