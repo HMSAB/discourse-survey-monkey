@@ -3,5 +3,5 @@ plugins:
     default: true
     client: true
   survey_survey_url:
-    default: "https://form.responster.com/gA5qE2"
+    default: "https://forms.office.com/r/fsv39AvpsL"
     client: true
